@@ -1,15 +1,17 @@
 from flask import Flask, request, render_template, jsonify
+from flask_cors import CORS
 import joblib
-import pandas
 app = Flask(__name__)
+CORS(app)  # <-- Enable CORS
 
 #Importing a library in one script doesn’t automatically share it with others.
 #When you run app.py, it’s a new process.
 #Think of imports like “bringing in tools” for that script’s work.
+MODEL_PATH = "./models/movie_review_bot"
+VECTORIZER_PATH = "./models/vectorizer.pkl"
 
-
-model = joblib.load("movie_review_bot")     
-vectorizer = joblib.load("vectorizer.pkl")   
+model = joblib.load(MODEL_PATH)     
+vectorizer = joblib.load(VECTORIZER_PATH)   
 
 @app.route('/result', methods=["POST"])
 def predict():
