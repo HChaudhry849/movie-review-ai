@@ -1,7 +1,7 @@
-import handle_data as hd
+from data import handle_data as hd
 import vectorize_data as vd
 import train_model as td
-import evaluation as ev
+from evaluate import evaluation as ev
 
 class Main:
 
