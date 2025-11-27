@@ -22,10 +22,7 @@ class Main:
         self.tModel.feed_model()
         self.tModel.predict()
         self.tModel.seeResult()
-        self.tModel.save_model()
-        self.eVal.check_accuracy()
-        self.eVal.check_matrix()
-        self.eVal.check_f1()
+        self.eVal.evaluate_model()
 
 #this is what runs the overall code
 if __name__ == "__main__":
