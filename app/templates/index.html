@@ -7,8 +7,8 @@
 
     <form action="/result" method="post">
         <label for="reviewm">Movie Review:</label>
-        <textarea rows="25" cols="50" type="text" id="mreview" name="review"></textarea><br><br>
-        <button type="button" onclick="sendreq()">Submit</button>
+        <textarea data-testid="reviewTxtField" rows="25" cols="50" type="text" id="mreview" name="review"></textarea><br><br>
+        <button data-testid="submitBtn" type="button" onclick="sendreq()">Submit</button>
     </form>
 
     <p id="display"></p>

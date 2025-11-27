@@ -1,5 +1,6 @@
 from sklearn.linear_model import LogisticRegression
 import joblib
+import os
 
 class TrainModel:
 
@@ -30,6 +31,6 @@ class TrainModel:
         print(self.predictedLabel)
 
     def save_model(self):
-        file_name = "movie_review_bot"
-        joblib.dump(self.clf,file_name)
-        joblib.dump(self.vd.vectorizer, "vectorizer.pkl") 
+        os.makedirs("models", exist_ok=True)
+        joblib.dump(self.clf, "models/movie_review_bot.pkl")
+        joblib.dump(self.vd.vectorizer, "models/vectorizer.pkl")
