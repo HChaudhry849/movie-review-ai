@@ -17,7 +17,8 @@
         function sendreq() {
             var review = document.getElementById("mreview").value;
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "http://127.0.0.1:5000/result", true);
+           //xhr.open("POST", "http://127.0.0.1:5000/result", true);
+            xhr.open("POST", "/result", true);
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.send(JSON.stringify({ review: review }));
 

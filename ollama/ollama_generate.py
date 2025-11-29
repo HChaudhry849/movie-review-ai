@@ -4,8 +4,10 @@ import os
 class OllamaGenerate:
 
     def __init__(self):
-        self.BASE_DIR = os.path.dirname(os.path.abspath(__file__))      
-        self.CSV_PATH = os.path.join(self.BASE_DIR, "..", "data", "cleaned_IMDB_Dataset.csv")
+        #self.BASE_DIR = os.path.dirname(os.path.abspath(__file__))      
+        #self.CSV_PATH = os.path.join(self.BASE_DIR, "..", "data", "cleaned_IMDB_Dataset.csv")
+        self.BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+        self.CSV_PATH = "/app/data/cleaned_IMDB_Dataset.csv"
         self.CSV_PATH = os.path.abspath(self.CSV_PATH)    
         self.prompt =  """
                         I need you to generate movie reviews, without using a movie name 
