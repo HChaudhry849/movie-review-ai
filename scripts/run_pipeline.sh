@@ -1,2 +1,2 @@
-cd ml-e2e-flow/train || exit
+cd app/train || exit
 python3 main.py
