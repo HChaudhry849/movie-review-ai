@@ -2,6 +2,7 @@ from data import handle_data as hd
 import vectorize_data as vd
 import train_model as td
 from evaluate import evaluation as ev
+from dashboard import dashboard as db
 
 class Main:
 
@@ -10,6 +11,7 @@ class Main:
         self.vData = vd.VectorizeData(self.hData)
         self.tModel = td.TrainModel(self.vData)
         self.eVal = ev.Evaluation(self.tModel)
+        self.db = db.Dashboard()
 
     def run(self):
         #data flow management (no duplicates) and ensure data is passed correctly 
@@ -23,6 +25,9 @@ class Main:
         self.tModel.predict()
         self.tModel.seeResult()
         self.eVal.evaluate_model()
+        self.eVal.load_file()
+        self.eVal.save_file()
+        self.db.buildChart()
 
 #this is what runs the overall code
 if __name__ == "__main__":
