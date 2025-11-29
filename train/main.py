@@ -27,7 +27,6 @@ class Main:
         self.eVal.evaluate_model()
         self.eVal.load_file()
         self.eVal.save_file()
-        self.db.buildChart()
 
 #this is what runs the overall code
 if __name__ == "__main__":

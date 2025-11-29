@@ -3,4 +3,5 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-CMD ["python", "ollama_generate.py"]
+EXPOSE 5000
+CMD ["python", "app.py"]
