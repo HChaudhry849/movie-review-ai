@@ -1,7 +1,13 @@
 FROM ollama/ollama:latest
 
-# Expose the API port
-EXPOSE 11434
+# Copy your model file if needed (optional)
 
-# Default command to serve Ollama
-CMD ["ollama", "serve", "--port", "11434"]
+# Start Ollama and pull the model inside ENTRYPOINT script
+ENTRYPOINT ["/bin/bash", "-c", "\
+    ollama serve & \
+    sleep 5 && \
+    ollama pull gemma3:4b && \
+    wait \
+"]
+
+EXPOSE 11434
