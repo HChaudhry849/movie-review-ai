@@ -1,13 +1,12 @@
 FROM ollama/ollama:latest
 
-# Copy your model file if needed (optional)
+# Install curl for healthcheck
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
-# Start Ollama and pull the model inside ENTRYPOINT script
-ENTRYPOINT ["/bin/bash", "-c", "\
-    ollama serve & \
-    sleep 5 && \
-    ollama pull gemma3:4b && \
-    wait \
-"]
+# Use a small startup script to keep things tidy
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
+ENTRYPOINT ["/start.sh"]
 
 EXPOSE 11434
