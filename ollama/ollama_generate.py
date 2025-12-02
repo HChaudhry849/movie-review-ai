@@ -38,6 +38,7 @@ class OllamaGenerate:
 
     def generateResponse(self):
         response = ollama.chat(model="gemma3:4b", messages=[{"role": "user", "content": self.prompt}])
+        #response = ollama.chat(model="gemma3:4b", messages=[{"role": "user", "content": self.prompt}], host="http://ollama-server:11434")
         print("User:", self.prompt)
         print(response["message"]["content"])
         self.ai_output = response["message"]["content"]
