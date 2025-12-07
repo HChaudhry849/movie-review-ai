@@ -14,6 +14,7 @@ done
 echo "Pulling model gemma3:4b..."
 ollama pull gemma3:4b
 echo "Model ready."
+# touch /tmp/ollama-ready
 
 # Keep the server alive
 wait $SERVER_PID

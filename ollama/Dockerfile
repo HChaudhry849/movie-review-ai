@@ -2,9 +2,10 @@ FROM python:3.8-slim
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-COPY . .
+COPY . /app/ollama/
 
-RUN chmod +x /app/entrypoint.sh
+
+RUN chmod +x /app/ollama/entrypoint.sh
 
 # ENTRYPOINT ensures that this script ALWAYS runs when the container starts.
 # Unlike CMD, which can be overridden if someone passes a different command to `docker run`,
@@ -15,4 +16,4 @@ RUN chmod +x /app/entrypoint.sh
 # 1. The script generates the training CSV.
 # 2. It creates the `training.done` file that signals the training-service to start.
 # 3. We rely on this process completing every time, so we can’t risk the script being skipped.
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/app/ollama/entrypoint.sh"]

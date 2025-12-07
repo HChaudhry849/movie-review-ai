@@ -4,7 +4,7 @@ set -e
 echo "Running ollama data generation…"
 
 # Run your existing Python logic
-python /app/ollama_generate.py
+python /app/ollama/ollama_generate.py
 
 echo "Generation completed, creating done file…"
 

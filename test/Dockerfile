@@ -3,4 +3,4 @@ WORKDIR /tests
 COPY ./package.json package.json
 RUN npm install
 COPY ./tests ./tests
-CMD echo playwright installed
+CMD ["npx", "playwright", "test"]

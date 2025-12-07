@@ -1,8 +1,8 @@
 #
 # 1. Add a entrypoint script in the root folder, this must create a training done file 
 # 2. Update the docker file so that it executes the entrypoint script
-# 3. Test it out 
-# 4. Finally add dashboard 
+# 3. Add Dashboard
+# 4. Test it locally with docker-compose up --build
 # 5. Use artifacts to persist data in github actions
 # 6. Update README with instructions on how to run locally and in CI/CD
 # 7. Test on github actions
@@ -36,7 +36,7 @@ services:
         environment:
             - OLLAMA_HOST=http://ollama-server:11434
         healthcheck:
-            test: ["CMD", "test", "-f", "/app/data/training.done"]
+            test: ["CMD", "test", "-f", "/data/training.done"]
             interval: 5s
             timeout: 3s
             retries: 20
@@ -95,7 +95,7 @@ services:
         
     flask-service:
         build:
-            context: ./app
+            context: ./flask_app
             dockerfile: Dockerfile
         ports:
             - "5000:5000"
@@ -111,10 +111,22 @@ services:
             timeout: 3s
             retries: 20
     
+    dashboard-service:
+        build:
+            context: ./dashboard
+            dockerfile: Dockerfile
+        volumes:
+            - ./evaluate:/app/evaluate
+        ports:
+            - "8501:8501"
+        depends_on:
+            flask-service:
+                condition: service_healthy
+    
     test:
         build:
             context: ./test
             dockerfile: Dockerfile
         depends_on:
-        flask-service:
-            condition: service_healthy
+            flask-service:
+                condition: service_healthy
