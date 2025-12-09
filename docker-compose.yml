@@ -1,26 +1,14 @@
-⚡ Best-practice recommendations
-
-Keep seed-service idempotent, safe to run multiple times.
-
-Ensure all dependent services wait for the seed completion:
-
-Either via healthchecks (e.g., /app/data/training.done or a seed.complete file),
-
-Or by manually orchestrating (docker-compose run seed-service first).
-
-Avoid hard-coded inter-container assumptions; rely on volumes and readiness checks.
-
-Continue to use one service per responsibility — this is good.
-
-✅ Conclusion
-
-Mostly follows best practices, especially with volumes, separation, and healthchecks.
-
-The only minor gap is the seed-service dependency: you need a clear guarantee it runs before others start.
-
-Otherwise, your services are modular, isolated, and volume-backed — aligned with Docker best practices.
-
-
+#⚡ Best-practice recommendations
+#Keep seed-service idempotent, safe to run multiple times.
+#Ensure all dependent services wait for the seed completion:
+#Either via healthchecks (e.g., /app/data/training.done or a seed.complete file),
+#Or by manually orchestrating (docker-compose run seed-service first).
+#Avoid hard-coded inter-container assumptions; rely on volumes and readiness checks.
+#Continue to use one service per responsibility — this is good.
+#✅ Conclusion
+#Mostly follows best practices, especially with volumes, separation, and healthchecks.
+#The only minor gap is the seed-service dependency: you need a clear guarantee it runs before others start.
+#Otherwise, your services are modular, isolated, and volume-backed — aligned with Docker best practices.
 
 services:
 
