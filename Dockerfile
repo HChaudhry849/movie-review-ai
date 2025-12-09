@@ -10,14 +10,16 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Prepare folders
-RUN mkdir -p data/ train/ evaluate/ models/
+RUN mkdir -p data/ evaluate/ models/
 
 # Copy project files
-COPY train/ train/
-COPY scripts/ scripts/
+COPY app/evaluate/ /app/evaluate/  
+COPY app/train/ /app/app/train/   
+COPY app/data/ /app/app/data/      
+COPY scripts/ /app/scripts/
 
 # Make entrypoint executable
-RUN chmod +x ./scripts/run_pipeline.sh
+RUN chmod +x /app/scripts/run_pipeline.sh
 
 # Run the pipeline on container start
-ENTRYPOINT ["./scripts/run_pipeline.sh"]
+ENTRYPOINT ["bash", "/app/scripts/run_pipeline.sh"]

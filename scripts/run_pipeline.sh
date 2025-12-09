@@ -8,12 +8,17 @@ while [ ! -f /app/data/training.done ]; do
 done
 
 echo "Starting training pipeline…"
-cd app/train || exit
+
+cd /app/train || exit
+
+# Point to top level folder for imports
+export PYTHONPATH=/app:$PYTHONPATH
+
 python3 main.py
 
 echo "Training pipeline completed."
 
-# Create the completion marker, this is just a fine created after the csv is updated. It's a flag to confirm the process is done.
+# Create the completion marker
 touch /app/data/training.complete
 
 # Keep the container alive for healthcheck

@@ -28,7 +28,7 @@ services:
             context: ./ollama
             dockerfile: Dockerfile
         volumes:
-            - ./data:/app/data
+            - shared-data:/app/data
         depends_on:
             ollama-server:
                 condition: service_healthy
@@ -36,7 +36,7 @@ services:
         environment:
             - OLLAMA_HOST=http://ollama-server:11434
         healthcheck:
-            test: ["CMD", "test", "-f", "/data/training.done"]
+            test: ["CMD", "test", "-f", "/app/data/training.done"]
             interval: 5s
             timeout: 3s
             retries: 20
@@ -78,9 +78,9 @@ services:
             # - Use Docker named volumes or upload/download artifacts using `actions/upload-artifact`.
             # - This allows the dynamic data (CSV, models, evaluation results) to persist between workflow steps.
             # -------------------------------
-            - ./data:/app/data
-            - ./evaluate:/app/evaluate
-            - ./models:/app/models
+            - shared-data:/app/data
+            - shared-evaluate:/app/evaluate
+            - shared-models:/app/models
         depends_on:
             ollama-service:
                 condition: service_healthy
@@ -95,12 +95,12 @@ services:
         
     flask-service:
         build:
-            context: ./flask_app
+            context: ./app/flask_app
             dockerfile: Dockerfile
         ports:
             - "5000:5000"
         volumes:
-            - ./models:/app/models
+            - shared-models:/app/models
         # Flask service depends on the training service to ensure models are available
         depends_on:
             training-service:
@@ -113,10 +113,10 @@ services:
     
     dashboard-service:
         build:
-            context: ./dashboard
+            context: ./app/dashboard
             dockerfile: Dockerfile
         volumes:
-            - ./evaluate:/app/evaluate
+            - shared-evaluate:/app/evaluate
         ports:
             - "8501:8501"
         depends_on:
@@ -130,3 +130,8 @@ services:
         depends_on:
             flask-service:
                 condition: service_healthy
+    
+volumes:
+    shared-data:
+    shared-evaluate:
+    shared-models:

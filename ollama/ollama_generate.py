@@ -1,102 +1,87 @@
-import ollama
 import os
+import csv
+from pathlib import Path
+import ollama  # Ensure Ollama is installed and importable
 
 class OllamaGenerate:
 
     def __init__(self):
-        #self.BASE_DIR = os.path.dirname(os.path.abspath(__file__))      
-        #self.CSV_PATH = os.path.join(self.BASE_DIR, "..", "data", "cleaned_IMDB_Dataset.csv")
-        self.BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-        self.CSV_PATH = "/app/data/cleaned_IMDB_Dataset.csv"
-        self.CSV_PATH = os.path.abspath(self.CSV_PATH)    
-        self.prompt =  """
-                        I need you to generate movie reviews, without using a movie name 
-                        You must output EXACTLY 20 lines and NOTHING else.
+        # Root folder of the project (ML-E2E-FLOW)
+        self.ROOT_DIR = Path(__file__).resolve().parents[0].parent  # This points to ML-E2E-FLOW
+        self.CSV_PATH = self.ROOT_DIR / "data" / "cleaned_IMDB_Dataset.csv"
 
-                        CRITICAL FORMAT RULES:
-                        1. Each line must contain exactly ONE review.
-                        2. Each line must end with exactly one comma followed immediately by either:
-                        positive
-                        negative
-                        3. You MUST place each review on its own line with NO blank lines.
-                        4. The sentiment must be ONLY the word:
-                        positive
-                        negative
-                        5. The sentiment must appear ONLY at the end of the line.
-                        6. No numbers of any kind.
-                        7. No extra commas or characters after the sentiment.
-                        8. Each review must be between 35 and 155 words.
+        # Prompt for AI-generated reviews
+        self.prompt = """
+        I need you to generate movie reviews, without using a movie name 
+        You must output EXACTLY 20 lines and NOTHING else.
 
-                        OUTPUT FORMAT EXAMPLE (copy this format EXACTLY, but with unique reviews):
-                        some long review text goes here,positive
-                        another review text goes here,negative
+        CRITICAL FORMAT RULES:
+        1. Each line must contain exactly ONE review.
+        2. Each line must end with exactly one comma followed immediately by either:
+           positive
+           negative
+        3. Each review must be between 35 and 155 words.
+        OUTPUT FORMAT EXAMPLE:
+        some long review text goes here,positive
+        another review text goes here,negative
+        """
 
-                        BEGIN NOW.
-                        ...
-                        """
         self.ai_output = ""
 
-    def generateResponse(self):
-        response = ollama.chat(model="gemma3:4b", messages=[{"role": "user", "content": self.prompt}])
-        #response = ollama.chat(model="gemma3:4b", messages=[{"role": "user", "content": self.prompt}], host="http://ollama-server:11434")
-        print("User:", self.prompt)
-        print(response["message"]["content"])
+    def generate_response(self):
+        """Generate AI movie reviews using Ollama"""
+        response = ollama.chat(
+            model="gemma3:4b",
+            messages=[{"role": "user", "content": self.prompt}]
+        )
         self.ai_output = response["message"]["content"]
         return self.ai_output
-    
-    def clean_response(self):
-        if not self.ai_output:
-            raise ValueError("No AI output found. Please call generateResponse() first.")
 
-        import re
+    def clean_response(self):
+        """Parse AI output and normalize into [review, sentiment]"""
+        if not self.ai_output:
+            raise ValueError("No AI output found. Call generate_response() first.")
 
         self.cleaned_rows = []
         lines = self.ai_output.split("\n")
 
         for raw_line in lines:
             line = raw_line.strip()
-
-            if not line:
+            if not line or "," not in line:
                 continue
 
-            if "," not in line:
-                print("Skipping malformed line (no comma):", line)
-                continue
-
+            # Split only at the last comma
             review, sentiment = line.rsplit(",", 1)
-
             review = review.strip()
-            sentiment = sentiment.strip().lower().rstrip("., ")
+            sentiment = sentiment.strip().lower()
 
-            # If sentiment is messy, extract keyword
-            # Example: "deeply depressing" -> depressing
-            sentiment = sentiment.split()[-1]  # keeps last word
-
-            # Normalize synonyms
-            positive_words = {"positive", "amazing", "heartwarming", "delightful", "charming", "moving", "thrilling", "impressive"}
-            negative_words = {"negative", "depressing", "awful", "dreadful", "tiresome", "frustrating"}
-
-            if sentiment in positive_words:
+            # Normalize sentiment robustly
+            if "positive" in sentiment:
                 sentiment = "positive"
-            elif sentiment in negative_words:
+            elif "negative" in sentiment:
                 sentiment = "negative"
             else:
-                print("Invalid sentiment, skipping:", sentiment)
+                # Skip invalid sentiment
                 continue
 
             self.cleaned_rows.append([review, sentiment])
 
         return self.cleaned_rows
 
-    def addData(self):
+    def add_data(self):
+        """Append cleaned rows to the CSV safely"""
         if not hasattr(self, "cleaned_rows"):
             raise ValueError("No cleaned data found. Call clean_response() first.")
 
-        with open(self.CSV_PATH, "a", encoding="utf-8") as file:
+        os.makedirs(self.CSV_PATH.parent, exist_ok=True)
+
+        with open(self.CSV_PATH, "a", encoding="utf-8", newline="") as file:
+            writer = csv.writer(file, quoting=csv.QUOTE_MINIMAL)
             for review, sentiment in self.cleaned_rows:
-                file.write(f"{review},{sentiment}\n")
+                writer.writerow([review, sentiment])
+
 
 obj = OllamaGenerate()
-obj.generateResponse()
+obj.generate_response()  # correct method name
 obj.clean_response()
-obj.addData()
+obj.add_data()     
