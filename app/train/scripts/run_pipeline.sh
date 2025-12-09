@@ -9,7 +9,7 @@ done
 
 echo "Starting training pipeline…"
 
-cd /app/train || exit
+cd /app/app/train || exit
 
 # Point to top level folder for imports
 export PYTHONPATH=/app:$PYTHONPATH

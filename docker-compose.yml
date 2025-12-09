@@ -1,14 +1,37 @@
-#
-# 1. Add a entrypoint script in the root folder, this must create a training done file 
-# 2. Update the docker file so that it executes the entrypoint script
-# 3. Add Dashboard
-# 4. Test it locally with docker-compose up --build
-# 5. Use artifacts to persist data in github actions
-# 6. Update README with instructions on how to run locally and in CI/CD
-# 7. Test on github actions
-# WARNING: Watchout for CURL commands in healthchecks, ensure curl is installed in the respective dockerfiles
-#
+⚡ Best-practice recommendations
+
+Keep seed-service idempotent, safe to run multiple times.
+
+Ensure all dependent services wait for the seed completion:
+
+Either via healthchecks (e.g., /app/data/training.done or a seed.complete file),
+
+Or by manually orchestrating (docker-compose run seed-service first).
+
+Avoid hard-coded inter-container assumptions; rely on volumes and readiness checks.
+
+Continue to use one service per responsibility — this is good.
+
+✅ Conclusion
+
+Mostly follows best practices, especially with volumes, separation, and healthchecks.
+
+The only minor gap is the seed-service dependency: you need a clear guarantee it runs before others start.
+
+Otherwise, your services are modular, isolated, and volume-backed — aligned with Docker best practices.
+
+
+
 services:
+
+    seed-service:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - shared-data:/app/data
+            - shared-evaluate:/app/evaluate
+            - shared-models:/app/models
 
     ollama-server:
         build:
@@ -43,7 +66,7 @@ services:
     
     training-service:
         build:
-            context: .
+            context: ./app/train
             dockerfile: Dockerfile
         volumes:
             # -------------------------------
@@ -81,9 +104,6 @@ services:
             - shared-data:/app/data
             - shared-evaluate:/app/evaluate
             - shared-models:/app/models
-        depends_on:
-            ollama-service:
-                condition: service_healthy
         healthcheck:
             #Simple healthcheck similar to ollama-service to ensure training-service is finished.
             #We must create a file /app/data/training.complete when training is done. This is a flag to confirm the process is done.

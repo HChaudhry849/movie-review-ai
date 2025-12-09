@@ -4,7 +4,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . /app/ollama/
 
-
 RUN chmod +x /app/ollama/entrypoint.sh
 
 # ENTRYPOINT ensures that this script ALWAYS runs when the container starts.

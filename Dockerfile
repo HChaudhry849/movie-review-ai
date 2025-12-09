@@ -1,25 +1,13 @@
 FROM python:3.8-slim
-
-# Install curl for healthcheck
-RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 
-# Install Python dependencies
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+# Copy seeds into the image
+COPY data/ /app/seeds/data/
+COPY models/ /app/seeds/models/
+COPY evaluate/history.json /app/seeds/evaluate/history.json
 
-# Prepare folders
-RUN mkdir -p data/ evaluate/ models/
+# Entrypoint
+COPY entrypoint_seed.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
 
-# Copy project files
-COPY app/evaluate/ /app/evaluate/  
-COPY app/train/ /app/app/train/   
-COPY app/data/ /app/app/data/      
-COPY scripts/ /app/scripts/
-
-# Make entrypoint executable
-RUN chmod +x /app/scripts/run_pipeline.sh
-
-# Run the pipeline on container start
-ENTRYPOINT ["bash", "/app/scripts/run_pipeline.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
