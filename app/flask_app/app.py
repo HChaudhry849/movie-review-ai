@@ -2,14 +2,13 @@ from flask import Flask, request, render_template, jsonify
 from flask_cors import CORS
 import joblib
 from pathlib import Path
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # Dynamically find the project root
-ROOT_DIR = Path(__file__).resolve().parents[2]  # app.py is in root, adjust if inside another folder
-MODELS_DIR = ROOT_DIR / "models"
-
+MODELS_DIR = Path(os.environ.get("MODELS_PATH", Path(__file__).resolve().parents[2] / "models"))
 MODEL_PATH = MODELS_DIR / "movie_review_bot.pkl"
 VECTORIZER_PATH = MODELS_DIR / "vectorizer.pkl"
 

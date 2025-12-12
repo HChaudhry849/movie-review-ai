@@ -1,15 +1,16 @@
+import os
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 import json
 import plotly.express as px
-from pathlib import Path
 
 class Dashboard:
 
     def buildChart(self):
-        # Get project root dynamically (two levels above this file)
-        root_dir = Path(__file__).resolve().parents[2]
-        json_path = root_dir / "evaluate" / "history.json"
+        # Use env variable if set, fallback to local relative path
+        EVAL_DIR = Path(os.environ.get("EVAL_PATH", Path(__file__).resolve().parents[2] / "evaluate"))
+        json_path = EVAL_DIR / "history.json"
 
         if not json_path.exists():
             st.error(f"history.json not found at {json_path}")
@@ -44,6 +45,5 @@ class Dashboard:
 if __name__ == "__main__":
     st.set_page_config(page_title="Evaluation Dashboard", layout="wide")
     st.title("Model Evaluation Dashboard")
-
     dashboard = Dashboard()
     dashboard.buildChart()

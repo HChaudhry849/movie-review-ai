@@ -1,12 +1,14 @@
 import pandas as pd
 from pathlib import Path
+import os
 
 class HandleData:
 
     def __init__(self):
         self.X = None
         self.y = None
-        self.data_path = Path(__file__).resolve().parents[2] / "data" / "cleaned_IMDB_Dataset.csv"
+        DATA_DIR = Path(os.environ.get("DATA_PATH", Path(__file__).resolve().parents[2] / "data"))
+        self.data_path = DATA_DIR / "cleaned_IMDB_Dataset.csv"
 
     def load_data(self):
         """
