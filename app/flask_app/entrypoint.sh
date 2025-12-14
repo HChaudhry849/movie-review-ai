@@ -10,6 +10,6 @@ done
 echo "$(date -Is) [FLASK] Training complete. Starting Flask..."
 
 # Move into the folder where app.py lives
-cd /app/flask_app || exit
+cd /app/app/flask_app || exit
 
 exec python3 app.py

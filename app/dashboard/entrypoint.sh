@@ -10,5 +10,5 @@ while ! curl -fs http://flask-service:5000/health; do
 done
 
 echo "$(date -Is) [DASHBOARD] Flask is ready. Starting dashboard..."
-cd /app/dashboard || exit
-exec streamlit run /app/dashboard/dashboard.py --server.port=8501 --server.address=0.0.0.0
+cd /app/app/dashboard || exit
+exec streamlit run dashboard.py --server.port=8501 --server.address=0.0.0.0
