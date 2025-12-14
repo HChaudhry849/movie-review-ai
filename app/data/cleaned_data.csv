@@ -1,0 +1,395 @@
+Year,Month,Day,text,sentiment,text_word_count,text_imputed
+2018,8,18,what a great day looks like dream,positive,7,False
+2018,8,18,i feel sorry i miss you here in the sea beach,positive,11,False
+2017,8,18,dont angry me,negative,3,False
+2022,6,8,we attend in the class just for listening teachers reading on slide just nonsence  ,negative,14,False
+2022,6,8,those who want to go let them go,negative,8,False
+2016,11,22,its night 2 am feeling neutral,neutral,6,False
+2017,12,28,2 am feedings for the baby are fun when he is all smiles and coos,positive,15,False
+2017,12,28,soooo high,neutral,2,False
+2019,10,28, both of you,neutral,3,False
+2018,5,28,today first time i arrive in the boat its amazing journey,positive,11,False
+2021,11,7,love is something like emc2 rules,neutral,6,False
+2016,4,10,i really really like the song cardigan by taylor swift,positive,10,False
+2016,5,15,my sharpie is running dangerously low on ink,negative,8,False
+2016,11,15,i want to go to music tonight but i lost my voice,negative,12,False
+2016,11,15,always somewhere i miss you where i have been,neutral,9,False
+2017,11,5,dont distrube me,negative,3,False
+2022,2,28,i dont care who are you and what can you do,negative,11,False
+2023,1,28,ive been sick for the past few days ,neutral,8,False
+2020,3,5,im come back home my past job its really good time for me,positive,13,False
+2019,11,30,i will never fall in love until i found you,positive,10,False
+2019,3,2, oh maya im so sorry  i hope you find her soon ,neutral,11,False
+2019,11,30,playing with kids its amazing,positive,5,False
+2019,3,2,is cleaning the house for her family who is comming later today,neutral,12,False
+2019,8,28,i tried to shtdown my pc and accenditenly i click in the restart button its really disgusting,negative,17,False
+2016,7,1,follow me i will follow you too,neutral,7,False
+2023,1,15,its amazing game i playing everyday,positive,6,False
+2023,2,10,  im sorry,negative,2,False
+2019,11,18,im in the village now and there hardly found internate feeling gloomy,negative,12,False
+2018,9,5,juss came back from barisal,neutral,5,False
+2020,4,2,went to sleep and there is a power cut in the village ,neutral,12,False
+2019,10,18,how looks like our company new logo,positive,7,False
+2023,1,18,i buy sophies world book im really so happy,positive,9,False
+2023,1,30, if it is any consolation i got my bmi tested hahaha it says i am obesed  well so much for being unhappy for about 10 minutes,negative,26,False
+2019,4,15, thats very funny  cute kids,positive,5,False
+2017,8,25, ahhh i slept through the game  im gonna try my best to watch tomorrow though i hope we play army,neutral,20,False
+2022,4,5,my semester final exam is complete hurray,positive,7,False
+2022,1,5,born and raised in nyc and living in texas for the past 10 years  i still miss ny,negative,18,False
+2019,3,8,just in case you wonder we are really busy today and this coming with with adding tons of new blogs and updates stay tuned,neutral,24,False
+2019,2,25,im soooooo sleeeeepy the last day o school was todaysniffle,negative,10,False
+2018,11,5, romance zero is funny,positive,4,False
+2019,9,14, car not happy big big dent in boot hoping theyre not going to write it off crossing fingers and waiting,neutral,20,False
+2018,11,5,yor are so unromantic,negative,4,False
+2020,8,29,mayday,neutral,1,False
+2014,6,3, id rather do the early runbut i am a morning runner,neutral,11,False
+2020,8,29, i love to but im only available from 5pm  and where dear,positive,12,False
+2023,4,8,the girl in the hair salon asked me shall i trim your eyebrows how old do i feel,neutral,18,False
+2020,4,2, i talk to you,neutral,4,False
+2019,8,5,im soo bored i dont like this music video,negative,9,False
+2023,5,20,this concert is amazing,positive,4,False
+2023,8,21,had nicotine replacement patch on for 4 hours so far so good but i did sleep for most of those 4 hours getting a bit twitchy now,neutral,27,False
+2023,9,11,its raining i need an umbrella ,neutral,6,False
+2023,9,3,should be sleeping  lost my voice a couple day ago,negative,10,False
+2023,9,3,im depressed im thinking about suicide what i need to do now,negative,12,False
+2019,8,30, ive heard this fall im waiting too,neutral,7,False
+2023,9,9,i saw an amazing nightmare yesterday night,neutral,7,False
+2023,9,26,i am such a creeper  i feel disappointed because of it,negative,11,False
+2020,11,29,i have bad headech what i need to do now,negative,10,False
+2023,9,2,happy mothers day to all moms out there mothers are our real hero,positive,13,False
+2023,9,14,grabbing coffee from  then making mom breakfast,neutral,7,False
+2023,1,27,im thinking that im going to have fun tonight,positive,9,False
+2023,2,1,yesterday was most valuable day for me,positive,7,False
+2023,2,17, haha i know i cant handle the fame  and thank you,positive,11,False
+2023,2,26,one suggestion for me is be up to date,neutral,9,False
+2023,3,1,always love everyone love all animals most important love your parents,positive,11,False
+2015,12,22,im playing minecraft video game im addicated to it,positive,9,False
+2015,12,18,see you in the cloud,neutral,5,False
+2023,1,27,im thinking that im going to have fun tonightand maybe some changes are coming,positive,14,False
+2023,2,1, thanks before the major chop,neutral,5,False
+2023,2,26,just got up and updated my ipod,neutral,7,False
+2023,3,1,i still loving you you are my love,positive,8,False
+2015,12,22,lets go its time to play cricket match,positive,8,False
+2015,12,18,hey everyone do you watch cricket match between eng vs aus yesterday,neutral,12,False
+2020,5,11,australia cricket team i love you,positive,6,False
+2019,11,3, which means youre just going to have to come back to vancouver and have it our way hahah,neutral,18,False
+2017,12,1,feeling smooth like chrome,positive,4,False
+2018,12,5,feeling gloomy,negative,2,False
+2017,9,10,today we will go a concert,neutral,6,False
+2016,2,28,i need coffee too,neutral,4,False
+2022,6,20, sounds like me,neutral,3,False
+2016,8,20,bad day  the day you realize what mess youve put me through will be one of the happiest days of my life,neutral,22,False
+2016,9,22,walking to class i hate not having a bikeespecially mine,negative,10,False
+2023,5,28,im start learning machine learning,neutral,5,False
+2023,8,26,failed inspection ,negative,2,False
+2023,8,28,lets sing a song,positive,4,False
+2023,9,20,happy fathers day to all the father in the world,positive,10,False
+2023,10,14,today my semester final exam was really great,positive,8,False
+2023,9,4,really great day,positive,3,False
+2023,10,11,the exception for a short dude,neutral,6,False
+2023,1,15,congratulation for your achievement,positive,4,False
+2023,1,19,if you followed us recently please dont be offended that we havent followed back we hit our limit ,positive,18,False
+2023,1,31, yes i work 9 to 5 ,neutral,6,False
+2023,2,15, hmmm maybe thats what they meant ,neutral,6,False
+2023,2,17,done at the spa   now meeting vic for some late lunch,neutral,11,False
+2023,2,19,happy monday  up and about going to tavares today hope everyone has a blessed day,positive,15,False
+2023,2,24, always have wanted to go to university,neutral,7,False
+2023,2,28, thanks,neutral,1,False
+2012,2,18,really great football match,positive,4,False
+2022,10,8,  thats why i need to be there,positive,7,False
+2019,12,3,okay so im dedicating my 300th tweet to the fact that im going to the apple store because there is a huge crack on the glass screen,neutral,27,False
+2023,2,28, if only we could ever actually be allowed to stay here and do that,neutral,14,False
+2021,2,28, let me know how that turns out,neutral,7,False
+2021,11,29, was that sass i detect  as long as it isnt back sass haha,neutral,13,False
+2021,2,10, yeah i was thinking about that ahaha,positive,7,False
+2021,1,15,today is our eee day,neutral,5,False
+2016,3,8,im not sleeping at all until  accepts my appology,negative,9,False
+2016,3,8,im studying in psychology,negative,4,False
+2016,10,18, i live for pain bring it on,neutral,7,False
+2023,5,23,okay im out for a while  back later,neutral,8,False
+2023,5,25,we visited worlds longest sea beach its really amazing time for us,positive,12,False
+2023,6,1,almost died laptop screen was set to 100 brightness after i reinstalled windows vista ,positive,14,False
+2023,6,9,waiting for tish to get off got to drive my moms crv to pick her up all my myself and duckie first time,neutral,23,False
+2023,6,20,your attitude looks like autistics child,negative,6,False
+2023,6,27,going to shower because i dont want to smell at school tomorrow,neutral,12,False
+2023,7,9,do you know sign languages,neutral,5,False
+2023,1,24, since the demise of woolworths it isnt easy to find reasonably priced pick n mix anywhere,negative,16,False
+2023,3,3,may the fourth be with you happy star wars day,positive,10,False
+2023,8,9,just got home from work,neutral,5,False
+2023,8,14, yes it does please dont go if you die i will cry which normally leads to small animals getting harmed,negative,20,False
+2023,8,30,writing report cards  soooo tired but what an amazing day check it out on fb soon,positive,16,False
+2023,9,7, it was only once for my big brother,neutral,8,False
+2023,10,5,good news finally finished my bachelor degree,neutral,7,False
+2023,1,17,well good morning all what a wonderful day in the neighborhood  thanks for all those that are now following another 60 this morning,positive,23,False
+2023,1,24,yesterday im watch a movie thats was really motivated for me,positive,11,False
+2023,3,3,  hope he is ok,positive,4,False
+2013,4,5,cant school just be done already it hurts too much seeing him every day,positive,14,False
+2020,2,22,i waited listening to wind blowing through the tumbleweed are none of you old enough to know what to do when someone says crackerack,neutral,24,False
+2019,6,10, hell yeah,neutral,2,False
+2020,6,22, him shirt at dinner do you need to ask  does it actually have ville on it,neutral,16,False
+2018,12,10, i know,neutral,2,False
+2023,5,30, smelly noooo i love alex vixon,neutral,6,False
+2023,6,7,went to a party last night great minds think alike  anyway happy birthday,positive,13,False
+2023,8,4, happy birthday just woke up on this side of earth so wishes are bit late,positive,15,False
+2023,9,17,thank you for teaching me values and to be a better person each day  i love so much youre the best mum in the world,positive,25,False
+2020,1,5,happy mothers day,positive,3,False
+2020,1,5, laughs im glad that you have self confidence  its a wonderful trait to have  ill applaud extra loud for it okay,positive,21,False
+2020,1,5,  thanks,positive,1,False
+2023,10,2,twittering after 2 days,neutral,4,False
+2015,11,10,getting ready for week  its too nice today to be stuck inside working,positive,13,False
+2023,9,29,i am tres depressed,negative,4,False
+2023,10,8,felt like  behaved like my son ate to compensate pigged out on homeroasted sugar almonds painful tum threw up still feel sick,negative,22,False
+2023,10,17,happy mothers day people i love my mom a lot still,positive,11,False
+2020,11,15, im sorry to hear that,negative,5,False
+2023,1,20, thats awesome dude yay for surprise celebrities  i got to meet him a few years ago he was soooo friendly,positive,20,False
+2023,1,26, it makes me happy to hear a girl talk or tweet about the nba but could you give my nuggets some love,positive,22,False
+2023,1,28,is getting the hang of twitter,neutral,6,False
+2023,2,16,you know your neck is jacked up when you are forced to pay for parking bc you cant turn you head to parallel park in the free spaces,negative,28,False
+2023,2,23,i want it back now,neutral,5,False
+2023,2,25,going to miss my roomie  we will no longer be roomies starting tomorrow,negative,13,False
+2014,7,20,bathing with two little angels keyla and janice,neutral,8,False
+2021,3,2, yep finished chocked full of spelling and grammatical errors but im cleaning it up tomorrow and popping it up  hehe,negative,20,False
+2020,2,28, hahahha lol true that i always remember my bd but i can never remember what date or even day it is,neutral,21,False
+2020,5,12,family is herehanging with them,neutral,5,False
+2019,11,18,watching ellen love her then doing the dishes  and tanning its gorgeous out,positive,13,False
+2019,11,18, whats goin on hun  im worried about you,negative,8,False
+2021,5,20, im not bannished but i am at work till 6,negative,10,False
+2019,8,20, morning if i get to see it ill let you know right now im going to go see wolverine,neutral,19,False
+2023,3,1, yes sober hahaha tanghaling tapat dude haha wild i dont knowwww  plan plan  before you go to us,positive,18,False
+2015,12,22, we never miss icarly  my son has a huge crush on miranda,positive,12,False
+2015,12,18,saw james carville in the store today his head is really that bald,neutral,13,False
+2020,5,11,i love blue and programming,neutral,5,False
+2018,12,5,errors are red but my life is looks like blue film,negative,11,False
+2017,9,10,downloading songs while trying to sneak a lil homework in too which should be my main priority not songs lol,neutral,20,False
+2016,2,28,errors are red but my life is blue i love rose and your lips baby,positive,15,False
+2023,5,28,sounds good,neutral,2,False
+2023,8,26,failed inspection did you know you can pass wooven but not woantitip bracket which is only sold woven this is worse than taxes,negative,23,False
+2023,8,28,jonas brothers  live to party                its rocking so hard     i love the song,positive,13,False
+2023,9,20,happy mothers day to all the mothers in the world,positive,10,False
+2023,10,14,ive got a fever can you chcek a good song im listening this song everytime,positive,15,False
+2023,9,4,fun night listened through the next episode of this turkey drama,positive,11,False
+2023,10,11,the exception for a short dude larenz fineass tate yum,neutral,10,False
+2023,1,15,screw the reviews i thought wolverine was awesome but not enough dominic monaghan for my liking,positive,16,False
+2023,1,19,if you followed us recently please dont be offended that we havent followed back we hit our limit   hopefully we will be free soon,positive,24,False
+2023,1,31, yes i work 6 to 3,neutral,6,False
+2023,2,15, hmmm maybe thats what they meant they eluded to something brand new but you know how the media is,neutral,19,False
+2023,2,24, always have wanted to go to oz,neutral,7,False
+2023,2,28, thx,neutral,1,False
+2012,2,18,i love this youtube tutorial,positive,5,False
+2022,10,8,  thats why i need to be thereto represent the blackberries,positive,10,False
+2021,1,15, dont know whether that helps google it to know more,neutral,10,False
+2016,3,8,wolverine was boss seriously and william was in it what the  ,negative,11,False
+2023,5,25,  powerblog what is this powerblog challenge you keep talking about  im a newbie follower,neutral,14,False
+2023,6,1,almost died laptop screen was set to 100 brightness after i reinstalled windows vista got a headache now  insanedefaults,positive,19,False
+2023,6,20,trying to decide on a movie with the friends not going to well lol p  no bible study 2nite which means day cake  buy my own,negative,26,False
+2023,7,9, sigh you know i am,neutral,5,False
+2023,7,14,discovered cause of a bug in the new  4 build publishing bug fix now hopefully new beta by tomorrow,positive,19,False
+2023,8,1,here are 4 free notebooks to know machine learning well,neutral,10,False
+2023,8,9,just got home from work and is chugging down a big bottle of apple juice,neutral,15,False
+2023,9,7, it was only once for my big brotherand im done now,neutral,11,False
+2023,10,5,good news finally finished my workout that has been paused for 6 hours bad news my resistance band is torn,neutral,20,False
+2023,1,24,ftsk and mercy mercedes were amazing tonight as always,positive,9,False
+2023,5,30, huh what the  smelly noooo i love alex vixon,neutral,9,False
+2023,6,7,went to a party last night dindin and i showed up in matching outfits  great minds think alike  anyway happy birthday ate lara,positive,23,False
+2023,8,4, happy bday just woke up on this side of earth so wishes are bit late,positive,15,False
+2020,1,5, laughs im glad that you have self confidence  its a wonderful trait to have  ill applaud extra loud for it okay,positive,21,False
+2015,12,1, red top tabloids build em up knock em down,neutral,9,False
+2016,12,22,tonight in party w my girls minus vita,positive,8,False
+2020,6,15,  why not now you made me sad i thought youd be jumping for joy,neutral,14,False
+2022,1,15, simple my,neutral,2,False
+2023,6,4,the pics i just uploaded are the baby pics of my cats missy is now an adult and a pretty little kitty but batty is in kitten heaven now,neutral,29,False
+2023,6,14, i saw the play of it here it was amazing,positive,10,False
+2023,6,22,i am glad to break my twitter virginity with you two,positive,11,False
+2023,6,29,dinner with the fam i have missed them,negative,8,False
+2023,7,6,live thats what i want more the better bound to be a few bad eggs though but they will soon learn,neutral,21,False
+2023,7,12,hell yeah kellynn got a twitter finally,neutral,7,False
+2023,7,18, i know   it was worth a shot though,positive,8,False
+2023,8,12,just opened a facebook account im a little confused i dont really get it twitter seems much better,positive,18,False
+2023,8,18,ship im stuck,negative,3,False
+2023,9,23,dustbin baby on at 1130 cannot wait  x,positive,8,False
+2018,6,22, not going to dwell on it it happened its passed just a shame as he was so supportive such is life  x,negative,22,False
+2023,10,20,whats the day going on,neutral,5,False
+2023,1,18,it looks like the office tv does get mlb network,neutral,10,False
+2022,4,3,home empty handed  no comics found today  i shall now indulge in my cupcakes from magnolia bakery,neutral,17,False
+2016,7,10,laying in bed til workkk oh the life definitely pinched a nerve,negative,12,False
+2017,3,28,today is a busy day exhausting,negative,6,False
+2023,8,6, i was going to go on sunday but now ive got too much going on that weekend,neutral,17,False
+2023,8,23, sorry to hear ur flight got cancelled  that blows,negative,9,False
+2023,1,17,ohh my tooth is hurts ohh  im sad it very hurts,negative,11,False
+2023,1,21,before i get too distracted id like to thank my new followers for taking the trouble to follow me and to my others feelin the love,positive,26,False
+2023,1,25, u think u have bills haii just finished paying mine thats y im broke,negative,14,False
+2023,1,28, not sure it didnt say it was 2 big i jst saw the pics of u on ur last bday you looked so pretty i miss you,neutral,27,False
+2023,2,13,sore throat planning the tet outing to marwell thoughgood times,neutral,10,False
+2023,3,2,mcfly gig last nightt omg it was amazin didnt sit down through the whole thing  mcfly did you see me and ma best mate we were in tutus,positive,28,False
+2013,4,20,2 days without sleep and now a migraine i thought life postr01 was meant to be relaxing,negative,17,False
+2022,9,28, there,neutral,1,False
+2021,5,10,sucks,negative,1,False
+2023,7,1, whens the sway sway winner announced,neutral,6,False
+2023,7,16, k will check it out,neutral,5,False
+2023,8,16, doing pretty well up and wide awake,positive,7,False
+2018,9,22,i want to wake up early and get a coffee tomorrow today   its going to be a busyy day but have to keep writing booo whoo,neutral,26,False
+2021,8,20,i miss daddy and mommy,negative,5,False
+2022,9,15,my dog is officially depressed that my brothers dogs are gone he doesnt want to go outside and when we did he play halfheartedly,negative,24,False
+2018,10,12,i just realized that i cant forward text msgs with my iphone,neutral,12,False
+2018,6,15,my frist post off to find a new car for my parents exciting,positive,13,False
+2018,9,5,argh noo missed the killers on wossy  that sucks missed out on brandon total failure anyone know if its repeated must investigate,negative,22,False
+2019,3,8,seriously bored without anyone to talk to but not tired enough for sleep,negative,13,False
+2017,6,12, i am lost please help me find a good home,negative,10,False
+2021,4,15,its a peter  gordon morning   and i go to pieces and i wanna hide  go to pieces and i almost die  ever  httpblipfm5yk38,neutral,23,False
+2022,11,15,ok so ive now got a bit of a bad back after lifting all drum hardware into my car   downer,negative,20,False
+2022,7,20, lmao smh  that one threw me off,neutral,7,False
+2019,7,28, oh nice going,positive,3,False
+2023,3,20,is getting ready for work working all weekend,neutral,8,False
+2021,4,15,gonna celebrate mothers day with the family but gonna start the partying tonite,positive,13,False
+2023,1,22, i agree with you,positive,4,False
+2020,8,8, i only do computers am hopeless at everything else,negative,9,False
+2018,7,10,90 degrees gross skies and thunderstormsperfect match for my mood  lol,positive,11,False
+2019,9,28,2nd aww thanks,positive,3,False
+2023,6,11, sorry rb is on ps3 for me,negative,7,False
+2023,6,17,i saw amazing heeels but they were too big,neutral,9,False
+2023,6,25,i just stuck my finger down my throat and there are a bunch of bumps on my tongue  throat,negative,19,False
+2023,7,4,dang last url went down   httpblipfm7aigm,negative,6,False
+2019,2,11, ohoh i missed all ur tweets  im gonna have to stay awake all night to see the announcement now  time difference,negative,21,False
+2018,6,3, damnit all that sucks  you were one of the ones i thought id drag back lol,negative,16,False
+2021,8,10, my boss shes moving to nyc,neutral,6,False
+2023,3,10,this is sooo crazy i have fever,negative,7,False
+2023,2,22,is spending her saturday morning taking notes for a research essay because some stupid  recalled the book im using not fair,negative,21,False
+2020,8,20,i think i need some new friends,neutral,7,False
+2017,1,12, looking forward to your gig in ireland  see ya there,neutral,10,False
+2020,9,18,i watching a movie name adimurie,positive,6,False
+2020,4,5,aww  you loooove me,positive,4,False
+2020,8,12,is hungry twitter  i want food,neutral,6,False
+2020,3,1,awesome lucky you,positive,3,False
+2017,6,18, yea i should know but tell me everything  ps send me direct messages telling   haha,neutral,15,False
+2022,4,18, haha im jewish i love that one,positive,7,False
+2020,12,17,had a great time out in the beer garden wit the boyos  i think the sun got to me a bit though feel a bit ill ,neutral,26,False
+2022,7,17, lm on 3 days too matt no fun this weekend,negative,10,False
+2020,11,1, u really dont think so  maybe ur rightlol btw what phone u using think u told me b4i might have an app for u,neutral,24,False
+2023,1,19, i feel your pain mine is the same way,negative,9,False
+2023,1,25,comes home in two days,neutral,5,False
+2023,1,27, sadly no it didnt come with one,negative,7,False
+2023,2,18,cant wait to see my boy tomorrow,positive,7,False
+2023,2,19, ehhh no just a check up i have a dentist app next week though getting my molar pulledroot canal,neutral,19,False
+2023,2,27, aww i miss driving down elmwood,negative,6,False
+2023,2,28,omg wango tango was  awsome i love my baby for taking me,positive,12,False
+2012,3,10,version 2 of our live interactive transsiberian ticket planner is launched,positive,11,False
+2021,12,3,30439 i really wish i could go,positive,7,False
+2021,10,22, yeah real hard but i know youll get by with it smile,neutral,12,False
+2022,1,15, im 25 in december thats not good at all next big birthday is 30  after 21 it flys by for sure,negative,21,False
+2023,5,6,  this has made my night  way too funny,positive,8,False
+2023,5,6,woo cavs  happy mothers day,positive,5,False
+2020,2,10, i make that same face when i get home and your mom is watching soaps,neutral,15,False
+2023,3,30,i have to go to work now,neutral,7,False
+2023,2,16, i cant believe you went and got boba without me,neutral,10,False
+2023,2,25,  and to you too how are you today,neutral,8,False
+2021,12,8, thanks for the warm welcome we didnt make plans   because our arrival time was so up in the air,positive,19,False
+2021,12,8,19 days and counting,neutral,4,False
+2022,5,12, sorry  friends  im swamped with deadlines right now and we have family visiting to boot no charades for me,negative,19,False
+2023,1,7,brainfreeze,neutral,1,False
+2017,8,28,just discovered a shortcoming of gravity when you use twitpic integrated it doesnt subtract the pic url from the 140 character limit,neutral,22,False
+2018,3,10,my sunburn is peeling,negative,4,False
+2021,8,15,perky purple nail polish isnt as perky when its chipped,neutral,10,False
+2020,11,18,httptwitpiccom4sx96  before they put a camera in the smokers pit  i can no longer vandalize that door without being caught,neutral,20,False
+2023,1,21,laying alone since mooks soo comfy in his fn play pen i thought it was ill at first now i dont have no one to cuddle with,negative,27,False
+2023,1,29,i hate the dentist,negative,4,False
+2019,3,28, nothing aimed at you just joining insorry,negative,7,False
+2019,6,28,im taking a twitter break cell is dying,negative,8,False
+2019,11,28, qood morninq,neutral,2,False
+2022,4,15,writing my english original writing storyyyyy and listening to a little respect by erasure  aaaaaah,neutral,15,False
+2022,12,1,needs more followers,neutral,3,False
+2017,4,15,i wish i could get my nails done  stupid job,negative,10,False
+2017,12,22,the little wormy from labyrinth sadly passed away today but its ok as hes still around in a happy ghost form aww  httptwitpiccom67aim,neutral,23,False
+2018,9,22, the no pants idea could be the new attempt worldwide to attract business back to the airlines,neutral,17,False
+2023,4,10, have a good one,positive,4,False
+2023,1,16, yep infact she is popular miss india 99 talented film actress  and lot more,positive,14,False
+2023,1,23,dosent want to go to work tomorrow,negative,7,False
+2023,2,12,daniel has won dsds his voice is great,positive,8,False
+2023,2,21,i need blood o negative,neutral,5,False
+2023,3,2,was hoping to go to red lobster this weekend,neutral,9,False
+2011,6,20,xatl u mean jack barakats wow so have u ever gone to his house hehe i mean ur ssoo lucky to have the address,positive,24,False
+2015,9,12,i sure do hope it becomes 420 this afternoon ,positive,9,False
+2014,7,10, it means that you are now famous congrats,positive,8,False
+2016,12,5,my phone passed away yesterday he jumped off the table  searching for a new phone,negative,15,False
+2023,1,30,i have such fantastic friends including several ones met through here thanks for being in my life  you are such amazing people,positive,22,False
+2021,1,15,tamlyn wishes she was as cool as my sock draw,positive,10,False
+2010,11,12, so no rice or crusty bread with the chili  aawww,neutral,10,False
+2018,8,7,  we are of like minds this evening  my dear,neutral,9,False
+2017,7,18,come and save me from my packing please,neutral,8,False
+2023,1,28,yes i love tea if that makes me typically english then so be it,positive,14,False
+2019,6,25, a mouth for sure,positive,4,False
+2020,9,15,dec0de i finally just have 1 hour of history at 300 pm but i went to my highschool at 800 am to make some homework with a friend,neutral,28,False
+2022,7,25, pancakes with lemon and sugar thanks,positive,6,False
+2015,9,1, si no bueno  i guess i just dont entertain him ,negative,10,False
+2015,9,1,im so hunrgy right now and these heels kill me i can hardly walk in them,negative,16,False
+2019,5,15,both electronic keys stopped working there is no keyhole cant get in my car so much for technology,negative,18,False
+2019,4,18, yay three followers good to know more than one person in this big wide world likes fishies,positive,17,False
+2019,11,10,my name is tony not hey   poor tony,negative,8,False
+2016,12,12,goodmorning,positive,1,False
+2018,3,15,took a shift tomorrow    i dont really feel like working right now,negative,12,False
+2015,6,28, i love mine too  happy mothers day to your mom  john taylor   much love to you too ,positive,17,False
+2015,12,18,saw a black snake in the garden  went back for a picture and it was gone,neutral,16,False
+2015,11,10,httptwitpiccom4wukt  we bought ludi her own rug dogs are the best,positive,11,False
+2015,9,28,no waterfront anymore   faccia luna and clarendon will have to do,negative,11,False
+2023,2,15,loves her mum very much happy mothers day to all the wonderful mothers out there,positive,15,False
+2017,8,22,slipped up and caught the flu  feeling like poop,negative,9,False
+2020,3,15,i have an urge to play wow but i have to wait 2 weeks til im at my dads 547days til mcfly im so excited  l,positive,26,False
+2023,3,10,ok  the passengers  no one is alive  theyre all dead  you just dont know it til the end  then you cry ,negative,21,False
+2020,12,15,discovered  and  are sharing on g reader with me and didnt even know it sigh im such a g reader newb,neutral,21,False
+2020,12,15,is chilled out tonite so cannot spew venom or write funny seems like these are the only 2 styles she has,neutral,21,False
+2017,11,15, if u do please pray 4 me  lord knows i need it,neutral,12,False
+2023,2,28,aaaaaw i want to live in the usa,neutral,8,False
+2020,4,15,morning tweeple,positive,2,False
+2021,4,5, hey i didnt get any ,neutral,5,False
+2022,7,10, now you only have 2 hours to sleep   rest if you need it,positive,13,False
+2020,4,2,  that makes my day so much better its been a rough one did i mention i love the new photo,neutral,20,False
+2020,7,18,i dont want to sit at home on prom night someone hang out with me,negative,15,False
+2015,7,12,is heading home from foot surgery and wishing she had a boyfriend to come over and cuddle with,positive,18,False
+2021,10,8,concert tonight  chackin out and not coming tomorrow,neutral,8,False
+2021,9,20, what happened i thought you were coming back today,neutral,9,False
+2021,9,20, lol dammit  well then next time then,negative,7,False
+2019,11,8, lol just dont ever forget me,positive,6,False
+2019,10,8, still jealous,negative,2,False
+2018,12,15,me at forever 21  ethan couldnt be there,negative,8,False
+2016,6,15,now im sad but im not giving in firsti didnt do nothing    ,negative,12,False
+2022,1,28,this week of mine was not easy  but finally its over ,negative,11,False
+2022,1,8,   wow what a beautiful picture and by the wayi am straightjust wanted to let you know     bella,positive,17,False
+2015,8,22,in arch drawing checking out mvccs cad degree looks good to me,positive,12,False
+2019,4,18, there are people and then there are pencils some are sharp some are not and some can be sharpened  my pencil philosophy,neutral,22,False
+2020,9,10,just about to go home im usually mr positive but this has been one of those daze well 15 mins until tomorrow,neutral,22,False
+2017,11,5, but you always have lee lets go to paris,neutral,9,False
+2021,7,20, you know you want to come keep me company whilst mums at her friends for the night  its such a nice evening,positive,22,False
+2022,8,10,cooking with my dad  having lots of fun in the kitchen together,positive,12,False
+2022,8,10,bouncing rush makes me feel nauseous,negative,6,False
+2022,3,20,off to woolsery this morning to hopefully see north molton u16 clinch the north devon league title lovely day for it,positive,21,False
+2019,5,5,playing singstar without my fave duetter,negative,6,False
+2021,3,15,  youre missing out bb im such a cereal nut i think i like every kind available,positive,16,False
+2021,8,2, thats just weird   oh and what was it you were drawing for me,negative,13,False
+2021,6,10,just woke up o mums singing to her new gnr cd replacement i bought because im a good daughter,positive,19,False
+2018,7,15,the birds are out oh man thats not cool  i didnt sleep yet for the night,negative,16,False
+2019,11,2,250 miles down only 1750 to go thats ok u2 on the radio alwas helps,positive,15,False
+2018,12,5,my street fighter iv skills are lacking cant beat seth on easy,negative,12,False
+2023,1,15, fil 461 with cool people like me,positive,7,False
+2023,1,18,good morning work and then its espns sunday night baseball hopefully it wont get rained out,positive,16,False
+2016,11,28, i think its under a honeymoon by the good life  either that or its under a honey moon by joseph arthur,neutral,21,False
+2021,10,2,my son got stung by a bug for the first time  his little finger is slightly swollen,negative,17,False
+2022,11,28, it was hours ago i came in and its only now i realised when i went to buy something online,neutral,20,False
+2022,7,5, oh just referring to our lil exchange on lj with regards to twitter archive postings,neutral,15,False
+2016,9,28,bumping dj opus in the drunk in the car  lmao dont act like u dont know,negative,16,False
+2021,9,15,why kiss the feet of the people who kick you when you can be anything that you want to  morning everyone hope you have the best day ever,positive,28,False
+2022,2,28,heres a brief preview   omg james is creepy in that role im scared of him,negative,15,False
+2023,1,16,im missing crab legs and attending my going away instead,negative,10,False
+2018,11,7,hicks are mean,negative,3,False
+2017,3,20,gettn ready to take a trip to jersey my dads not doing so good he needs a new heartwhoeva sees this please say a prayer for my dad,negative,28,False
+2023,3,22,back soon need to run to the shops and cut the grass,neutral,12,False
+2018,7,10,im up i have a plan to transform my bedroom today random,neutral,12,False
+2021,11,30,home until tomorrow did my running and spinning now time for chiropractor laundry shopping and visiting family missing nathan,negative,19,False
+2021,11,30, thats another sponsor,neutral,3,False
+2023,1,22, and most of us are going to be stuck in an office some without windows,negative,15,False
+2023,1,24, no its not sad should make you proud,negative,8,False
+2023,1,27,   sorry well try to keep it down,negative,7,False
+2023,3,3,is home alone doing hw,neutral,5,False
+2015,10,18,according to  a quarter of families under six live in poverty,negative,11,False
+2021,2,25,the plan to not spend money is not going well,negative,10,False
+2022,5,30,uploading all my bamboozle pictures of facebook,neutral,7,False
+2018,8,10, congratulations  you guys finish a month early than we do booo,positive,11,False
+2019,3,25, actually i wish i was back in tahoe  i miss it there,negative,12,False

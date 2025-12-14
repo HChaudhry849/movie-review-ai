@@ -1,4 +1,25 @@
+#⚡ Best-practice recommendations
+#Keep seed-service idempotent, safe to run multiple times.
+#Ensure all dependent services wait for the seed completion:
+#Either via healthchecks (e.g., /app/data/training.done or a seed.complete file),
+#Or by manually orchestrating (docker-compose run seed-service first).
+#Avoid hard-coded inter-container assumptions; rely on volumes and readiness checks.
+#Continue to use one service per responsibility — this is good.
+#✅ Conclusion
+#Mostly follows best practices, especially with volumes, separation, and healthchecks.
+#The only minor gap is the seed-service dependency: you need a clear guarantee it runs before others start.
+#Otherwise, your services are modular, isolated, and volume-backed — aligned with Docker best practices.
+
 services:
+
+    seed-service:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - shared-data:/app/data
+            - shared-evaluate:/app/evaluate
+            - shared-models:/app/models
 
     ollama-server:
         build:
@@ -18,10 +39,59 @@ services:
             context: ./ollama
             dockerfile: Dockerfile
         volumes:
-            - ./data:/app/data
+            - shared-data:/app/data
         depends_on:
             ollama-server:
                 condition: service_healthy
         restart: on-failure
         environment:
             - OLLAMA_HOST=http://ollama-server:11434
+ 
+    training-service:
+        build:
+            context: ./app
+            dockerfile: Dockerfile
+        volumes:
+            - shared-data:/app/data
+            - shared-evaluate:/app/evaluate
+            - shared-models:/app/models
+        environment:
+            - DATA_PATH=/app/data
+        
+    flask-service:
+        build:
+            context: ./app/flask_app
+            dockerfile: Dockerfile
+        ports:
+            - "5000:5000"
+        volumes:
+            - shared-models:/app/models
+            - shared-data:/app/data  
+        environment:
+            - MODELS_PATH=/app/models
+        healthcheck:
+            test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+            interval: 5s
+            timeout: 3s
+            retries: 20
+    
+    dashboard-service:
+        build:
+            context: ./app/dashboard
+            dockerfile: Dockerfile
+        volumes:
+            - shared-evaluate:/app/evaluate
+        ports:
+            - "8501:8501"
+        environment:
+            - EVAL_PATH=/app/evaluate
+    
+    test:
+        build:
+            context: ./test
+            dockerfile: Dockerfile
+    
+volumes:
+    shared-data:
+    shared-evaluate:
+    shared-models:
