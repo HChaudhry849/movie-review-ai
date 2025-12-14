@@ -90,9 +90,6 @@ services:
         build:
             context: ./test
             dockerfile: Dockerfile
-        depends_on:
-            flask-service:
-                condition: service_healthy
     
 volumes:
     shared-data:
