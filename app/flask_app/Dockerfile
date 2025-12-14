@@ -5,5 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . /app/flask_app/  
+# Make entrypoint executable
+RUN chmod +x /app/flask_app/entrypoint.sh
 EXPOSE 5000
-CMD ["python", "flask_app/app.py"]
+ENTRYPOINT ["bash", "/app/app/flask_app/entrypoint.sh"]

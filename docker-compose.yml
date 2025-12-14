@@ -46,12 +46,7 @@ services:
         restart: on-failure
         environment:
             - OLLAMA_HOST=http://ollama-server:11434
-        healthcheck:
-            test: ["CMD", "test", "-f", "/app/data/training.done"]
-            interval: 5s
-            timeout: 3s
-            retries: 20
-    
+ 
     training-service:
         build:
             context: ./app
@@ -60,16 +55,8 @@ services:
             - shared-data:/app/data
             - shared-evaluate:/app/evaluate
             - shared-models:/app/models
-        depends_on:
-            ollama-service:
-                condition: service_healthy
         environment:
             - DATA_PATH=/app/data
-        healthcheck:
-            test: ["CMD", "test", "-f", "/app/data/training.complete"]
-            interval: 5s
-            timeout: 3s
-            retries: 20
         
     flask-service:
         build:
@@ -79,9 +66,7 @@ services:
             - "5000:5000"
         volumes:
             - shared-models:/app/models
-        depends_on:
-            training-service:
-                condition: service_healthy
+            - shared-data:/app/data  
         environment:
             - MODELS_PATH=/app/models
         healthcheck:
@@ -98,9 +83,6 @@ services:
             - shared-evaluate:/app/evaluate
         ports:
             - "8501:8501"
-        depends_on:
-            flask-service:
-                condition: service_healthy
         environment:
             - EVAL_PATH=/app/evaluate
     
