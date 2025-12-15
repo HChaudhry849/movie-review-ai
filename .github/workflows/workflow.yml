@@ -1,0 +1,27 @@
+name: Train and Run Model
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  run-model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build and start services
+        run: docker compose up --build -d
+
+      # 🔍 Show container status
+      - name: Docker Compose status
+        run: docker compose ps
+
+      # 📜 Dump logs (always)
+      - name: Docker Compose logs
+        run: docker compose logs --no-color
