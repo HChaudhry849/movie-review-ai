@@ -84,8 +84,8 @@ jobs:
           done
 
       # 🚀 Start Dashboard
-      - name: Start Dashboard
-        run: docker compose exec -T dashboard-service bash -c "cd /app/app/dashboard && exec streamlit run dashboard.py --server.port=8501 --server.address=0.0.0.0"
+      #- name: Start Dashboard
+      #  run: docker compose exec -T dashboard-service bash -c "cd /app/app/dashboard && exec streamlit run dashboard.py --server.port=8501 --server.address=0.0.0.0"
 
       # 🧪 Run tests
       - name: Run Playwright tests
