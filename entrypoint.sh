@@ -13,4 +13,7 @@ cp -n /app/seeds/models/* /app/models/
 mkdir -p /app/evaluate
 cp -n /app/seeds/evaluate/history.json /app/evaluate/
 
+# ✅ Create completion marker
+touch /app/data/seed.complete
+
 echo "Seeding complete."
