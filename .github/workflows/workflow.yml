@@ -1,0 +1,105 @@
+name: Train and Run Model
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  run-model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Build and start all services in detached mode
+      - name: Build and start services
+        run: docker compose up --build -d
+
+      # 🔍 Show container status
+      - name: Docker Compose status
+        run: docker compose ps
+
+      # ⏳ Wait for Seed service
+      - name: Wait for Seed service
+        run: |
+          echo "Waiting for seed-service to complete..."
+          for i in {1..60}; do
+            if docker compose exec -T seed-service test -f /app/data/seed.complete; then
+              echo "Seed complete detected"
+              break
+            fi
+            sleep 5
+          done
+
+      # ⏳ Wait for Ollama server to be healthy
+      - name: Wait for Ollama server
+        run: |
+          echo "Waiting for Ollama server to be healthy..."
+          for i in {1..60}; do
+            if docker compose exec -T ollama-server curl -f http://localhost:11434/api/tags; then
+              echo "Ollama server is healthy"
+              break
+            fi
+            sleep 5
+          done
+
+      # ⏳ Wait for Ollama data generation
+      - name: Wait for training.done from Ollama
+        run: |
+          echo "Waiting for /app/data/training.done..."
+          for i in {1..120}; do
+            if docker compose exec -T ollama-service test -f /app/data/training.done; then
+              echo "training.done detected"
+              break
+            fi
+            sleep 5
+          done
+
+      # ⏳ Wait for training to complete
+      - name: Wait for training.complete
+        run: |
+          echo "Waiting for /app/data/training.complete..."
+          for i in {1..180}; do
+            if docker compose exec -T training-service test -f /app/data/training.complete; then
+              echo "training.complete detected"
+              break
+            fi
+            sleep 5
+          done
+
+      # ⏳ Wait for Flask service
+      - name: Wait for Flask service
+        run: |
+          echo "Waiting for Flask service to be healthy..."
+          for i in {1..60}; do
+            if docker compose exec -T flask-service curl -f http://localhost:5000/health; then
+              echo "Flask service is healthy"
+              break
+            fi
+            sleep 5
+          done
+
+      # 🚀 Start Dashboard
+      #- name: Start Dashboard
+      #  run: docker compose exec -T dashboard-service bash -c "cd /app/app/dashboard && exec streamlit run dashboard.py --server.port=8501 --server.address=0.0.0.0"
+
+      # 🧪 Run tests
+      - name: Run Playwright tests
+        run: |
+          echo "Waiting for Flask before running tests..."
+          for i in {1..60}; do
+            if docker compose exec -T flask-service curl -f http://localhost:5000/health; then
+              echo "Flask ready, running tests..."
+              break
+            fi
+            sleep 3
+          done
+          docker compose exec -T test npx playwright test
+
+      # 📜 Dump logs (always)
+      - name: Docker Compose logs
+        run: docker compose logs --no-color
