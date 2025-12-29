@@ -2,6 +2,7 @@ import pandas as pd
 from pathlib import Path
 import os
 
+#Handles data
 class HandleData:
 
     def __init__(self):
